@@ -17,24 +17,45 @@ span.warning { background-color: red; color: white; }
 <table>
 <tr>
 <th colspan="2">
-Do stuff<br>
+Convert to mobygames credits text input format and check (check doesn't work yet)<br>
 <button id="convert">Convert</button>
 <button id="check">Check</button>
 </th>
 </tr>
 <tr>
 <td class="split left">
-<textarea id="input">Group top level (wrong way to do it)
+<textarea id="input">Mobygames credits text import example
+Group top level (wrong way to do it)
 
 Group secondary level (wrong way to do it)
 
 TITLE BY
 NAME ONE
 Name Two (credited as Name Three
-Name "nick" Name</textarea>
+Name "nick" Name
+
+tab separated credits example:
+
+Project Leadership	Art Director and Head of Audio	Neil Thompson
+Project Leadership		
+Project Leadership		Do you see the problem here?
+	Technical Director	Jacques Lebrun
+	Director of Production	Leah Summers
+Animation	Director of Animation	Steve Bouliane
+	Animation	Chris Cook
+		George Damouni
+		Christopher Diaz
+		Jack Pickering
+Gardening		
+Seasoning		
+Heads of Homework		
+	Two	
+	Three	
+	Seven	
+		Yeah, this converter just converts without checking if there's a title between group and name even or whether empty groups/titles get created or &lt; is added, the checker will take care of that later</textarea>
 </td>
 <td class="split">
-<div id="output" disabled>
+<div id="output" contenteditable>
 result will appear here
 </div>
 </td>
